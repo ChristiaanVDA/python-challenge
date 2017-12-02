@@ -4,7 +4,7 @@
 # import modules
 import os
 import csv
-import collections
+from collections import Counter
 
 # Create lists to store column data
 Voter_ID = []
@@ -47,13 +47,17 @@ with open(file_choice, newline ='') as csvfile1:
     print("Voter Count: " + str(voter_count))
     
     # Get a list of the unique candidates
-    set_candidates = set(Candidate)
-    candidate_list = list(set_candidates)
-  
-    unique_candidates = set(set_candidates)
+    candidates = Candidate
+    #unique_candidates = set(candidates)           
+    c = Counter(candidates)
     
+    print(c.items())
     
-    print (unique_candidates)
+    #print(unique_candidates)
+    #print(unique_candidate_count)
+
+
+
 
     # Write to the text file
 with open("Output.txt", "w") as text_file:
