@@ -46,16 +46,12 @@ with open(file_choice, newline ='') as csvfile1:
     voter_count = len(Voter_ID) 
     print("Voter Count: " + str(voter_count))
     
-    # Get a list of the unique candidates
-    candidates = Candidate
-    #unique_candidates = set(candidates)           
+    # Get a count of the unique candidates through collection.Counter
+    candidates = Candidate         
     c = Counter(candidates)
     
-    print(c.items())
-    
-    #print(unique_candidates)
-    #print(unique_candidate_count)
-
+    print("Candidates and votes = " + str(c.items()))
+ 
 
 
 
